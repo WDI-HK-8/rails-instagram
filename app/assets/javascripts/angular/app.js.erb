@@ -39,7 +39,7 @@ app.config(['$routeProvider', '$locationProvider', '$authProvider', function($ro
     // });
 
     $authProvider.configure({
-      apiUrl: 'http://localhost:3000'
+      apiUrl: "<%= ENV['URL'] %>" || 'http://localhost:3000'
     });
 
     // $locationProvider.html5Mode(true);
