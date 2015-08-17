@@ -1,12 +1,10 @@
 class PostsController < ApplicationController
-  # before_action :authenticate_user!
-
   def index
     @posts = Post.includes(:comments) # retrieve all the Post data, and store them in the variable @posts
   end
 
   def create
-    @post = current_user.posts.new(post_params)
+    @post = Post.new(post_params)
 
     @post.save
   end
