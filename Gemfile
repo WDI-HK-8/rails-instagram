@@ -9,7 +9,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn'
 # gem 'bcrypt', '~> 3.1.7'
 # gem 'active_hash'
+
 gem 'rack-cors', :require => 'rack/cors'
+
+gem 'bower'
+gem 'rails_12factor', group: :production
 
 group :development do
   gem "web-console"
