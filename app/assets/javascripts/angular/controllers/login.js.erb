@@ -1,4 +1,16 @@
 // Note: you have to duplicate $scope in 2 places to make it work
-app.controller('LoginCtrl', ['$scope', function($scope){
-  
+app.controller('LoginCtrl', ['$scope', '$auth', function($scope, $auth){
+  $scope.loginForm = {};
+
+  $scope.loginForm.logIn = function() {
+    $auth.submitLogin($scope.loginForm)
+      .then(function(resp) {
+        // handle success response
+        console.log(resp);
+      })
+      .catch(function(resp) {
+        // handle error response
+        console.log(resp);
+      });
+  };
 }]);
