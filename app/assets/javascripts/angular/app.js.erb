@@ -13,13 +13,11 @@ app.config(['$routeProvider', '$locationProvider', '$authProvider', function($ro
     when('/signup', {
       templateUrl: "<%= asset_path('auth/signup.html') %>",
       controller: 'SignUpCtrl'
+    }).
+    when('/login', {
+      templateUrl: "<%= asset_path('auth/login.html') %>",
+      controller: 'LoginCtrl'
     })
-
-    // .
-    // when('/login', {
-    //   templateUrl: "<%= asset_path('auth/login.html') %>",
-    //   controller: 'LoginCtrl'
-    // })
 
     // .
     // otherwise({
