@@ -15,6 +15,9 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'bower'
 gem 'rails_12factor', group: :production
 
+gem 'devise_token_auth'
+gem 'omniauth'
+
 group :development do
   gem "web-console"
   gem "better_errors"
