@@ -1,0 +1,8 @@
+app.directive('navbar', function(){
+  // Runs during compile
+  return {
+    controller: 'NavbarCtrl',
+    restrict: 'E',
+    templateUrl: "<%= asset_path('nav/navbar.html') %>",
+  };
+});
