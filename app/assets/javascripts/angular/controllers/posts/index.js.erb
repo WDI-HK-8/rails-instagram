@@ -1,0 +1,9 @@
+app.controller('PostsIndexCtrl', ['$scope', '$http', '$location', function($scope, $http, $location){
+
+  var url = "<%= ENV['URL'] %>" || "http://localhost:3000";
+
+  $http.get(url + '/posts').success(function(response){
+    console.log(response);
+    $scope.posts = response;
+  });
+}]);

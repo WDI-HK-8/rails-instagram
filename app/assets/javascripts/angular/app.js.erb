@@ -10,6 +10,7 @@ app.config(['$routeProvider', '$locationProvider', '$authProvider', function($ro
       templateUrl: "<%= asset_path('static_pages/index.html') %>",
       controller: 'StaticPagesCtrl'
     }).
+
     when('/login', {
       templateUrl: "<%= asset_path('auth/login.html') %>",
       controller: 'LoginCtrl'
@@ -17,7 +18,21 @@ app.config(['$routeProvider', '$locationProvider', '$authProvider', function($ro
     when('/signup', {
       templateUrl: "<%= asset_path('auth/signup.html') %>",
       controller: 'SignUpCtrl'
+    }).
+
+    when('/posts', {
+      templateUrl: "<%= asset_path('posts/index.html') %>",
+      controller: 'PostsIndexCtrl'
+    }).
+    when('/posts/:id', {
+      templateUrl: "<%= asset_path('posts/show.html') %>",
+      controller: 'PostsShowCtrl'
+    }).
+    when('/new_posts', {
+      templateUrl: "<%= asset_path('posts/new.html') %>",
+      controller: 'PostsNewCtrl'
     })
+
     // .
     // otherwise({
     //   redirectTo: '/'

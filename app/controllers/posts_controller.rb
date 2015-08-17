@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
+  # before_action :authenticate_user!
+
   def index
-    @posts = Post.includes(:comments) # retrieve all the Post data, and store them in the variable @posts
+    @posts = Post.all # retrieve all the Post data, and store them in the variable @posts
   end
 
   def create
