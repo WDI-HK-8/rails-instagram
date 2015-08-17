@@ -1,4 +1,13 @@
 app.controller('NavbarCtrl', ['$scope', '$auth', '$location', function($scope, $auth, $location){
   $scope.navMessage = "Navbar Everywhere";
 
+  $scope.logout = function () {
+    $auth.signOut().then(function(resp) {
+      console.log(resp);
+      $location.path('/')
+    }).catch(function(resp) {
+      console.log(resp);
+    });
+  };
+
 }]);
