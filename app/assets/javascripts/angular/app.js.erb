@@ -1,9 +1,9 @@
 'use strict'; // Make sure you don't have syntax errors
 
 // var app = angular.module('appName', ['oneDependency']);
-var app = angular.module('rails-instagram', ['ngRoute']);
+var app = angular.module('rails-instagram', ['ngRoute', 'ng-token-auth']);
 
-app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', '$authProvider', function($routeProvider, $locationProvider, $authProvider) {
   // Configure Angular Routes
   $routeProvider.
     when('/', {
@@ -22,6 +22,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     // otherwise({
     //   redirectTo: '/'
     // });
+
+    $authProvider.configure({
+      apiUrl: 'localhost:3000'
+    });
 
     // $locationProvider.html5Mode(true);
 }]);
