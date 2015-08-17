@@ -1,9 +1,12 @@
-app.controller('LoginCtrl', ['$scope', '$auth', '$location', function($scope, $auth, $location){
+app.controller('LoginCtrl', ['$scope', '$auth', '$location', 'UserServices', function($scope, $auth, $location, UserServices){
 
   $scope.login = function () {
     $auth.submitLogin($scope.loginForm).then(function(resp) {
       // handle success response
       console.log(resp);
+
+      // store current user data to UserServices
+      UserServices.user = resp;
 
       // redirect back to root
       $location.path('/');

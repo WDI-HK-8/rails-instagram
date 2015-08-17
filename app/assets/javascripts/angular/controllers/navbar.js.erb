@@ -1,9 +1,17 @@
-app.controller('NavbarCtrl', ['$scope', '$auth', '$location', function($scope, $auth, $location){
+app.controller('NavbarCtrl', ['$scope', '$auth', '$location', 'UserServices', function($scope, $auth, $location, UserServices){
   $scope.navMessage = "Navbar Everywhere";
+  $scope.serviceMessage = UserServices.serviceMessage;
+
+  $scope.user = UserServices.user;
 
   $scope.logout = function () {
     $auth.signOut().then(function(resp) {
       console.log(resp);
+
+      // Update UserServices.user and $scope.user to null because user has logout
+      UserServices.user = null;
+      $scope.user = null;
+
       $location.path('/')
     }).catch(function(resp) {
       console.log(resp);

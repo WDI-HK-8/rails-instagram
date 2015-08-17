@@ -8,14 +8,14 @@
         <span class="icon-bar"></span>
       </button>
       <a href="/#/" class="navbar-brand">IG</a>
-      <p class="navbar-text">{{navMessage}}</p>
+      <p class="navbar-text">{{navMessage}} & {{serviceMessage}}</p>
     </div>
 
     <div class="collapse navbar-collapse" id="right-nav-links">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/#/signup"><button class="btn btn-primary">Signup</button></a></li>
-        <li><a href="/#/login"><button class="btn btn-success">Login</button></a></li>
-        <li><a><button class="btn btn-danger" ng-click="logout()">Logout</button></a></li>
+        <li ng-show="user == null"><a href="/#/signup"><button class="btn btn-primary">Signup</button></a></li>
+        <li ng-show="user == null"><a href="/#/login"><button class="btn btn-success">Login</button></a></li>
+        <li ng-show="user != null"><a><button class="btn btn-danger" ng-click="logout()">Logout</button></a></li>
       </ul>
     </div>
 

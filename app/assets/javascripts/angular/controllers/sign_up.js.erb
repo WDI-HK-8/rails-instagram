@@ -1,9 +1,12 @@
-app.controller('SignUpCtrl', ['$scope', '$auth', '$location', function($scope, $auth, $location){
+app.controller('SignUpCtrl', ['$scope', '$auth', '$location', 'UserServices', function($scope, $auth, $location, UserServices){
 
   $scope.signup = function () {
     $auth.submitRegistration($scope.registrationForm).then(function(resp) {
       // handle success response
       console.log(resp);
+
+      // store current user data to UserServices
+      UserServices.user = resp.data.data;
 
       // redirect back to root when registration succesfull 
       $location.path('/');
