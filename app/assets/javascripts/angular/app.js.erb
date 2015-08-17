@@ -9,14 +9,15 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     when('/', {
       templateUrl: "<%= asset_path('static_pages/index.html') %>",
       controller: 'StaticPagesCtrl'
+    }).
+    when('/login', {
+      templateUrl: "<%= asset_path('auth/login.html') %>",
+      controller: 'LoginCtrl'
+    }).
+    when('/signup', {
+      templateUrl: "<%= asset_path('auth/signup.html') %>",
+      controller: 'SignUpCtrl'
     })
-
-    // .
-    // when('/login', {
-    //   templateUrl: "<%= asset_path('auth/login.html') %>",
-    //   controller: 'LoginCtrl'
-    // })
-
     // .
     // otherwise({
     //   redirectTo: '/'
