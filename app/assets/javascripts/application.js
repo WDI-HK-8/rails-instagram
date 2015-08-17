@@ -14,4 +14,6 @@
 //= require angular-route/angular-route
 //= require ng-token-auth/dist/ng-token-auth
 //= require angular-cookie/angular-cookie
+//= require jquery/dist/jquery.min
+//= require bootstrap/dist/js/bootstrap.min
 //= require_tree .
