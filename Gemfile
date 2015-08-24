@@ -19,6 +19,7 @@ gem 'devise_token_auth'
 gem 'omniauth'
 
 gem "paperclip", "~> 4.3"
+gem "aws-sdk"
 
 group :development do
   gem "web-console"
