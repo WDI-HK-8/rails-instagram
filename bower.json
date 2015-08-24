@@ -7,7 +7,9 @@
     "angular-cookie": "~4.0.9",
     "ng-token-auth": "~0.0.28",
     "bootstrap": "~3.3.5",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "ng-file-upload-shim": "~7.0.10",
+    "ng-file-upload": "~7.0.10"
   },
   "homepage": "https://github.com/WDI-HK-8/rails-instagram",
   "authors": [
