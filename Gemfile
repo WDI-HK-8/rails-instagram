@@ -18,6 +18,8 @@ gem 'rails_12factor', group: :production
 gem 'devise_token_auth'
 gem 'omniauth'
 
+gem "paperclip", "~> 4.3"
+
 group :development do
   gem "web-console"
   gem "better_errors"
