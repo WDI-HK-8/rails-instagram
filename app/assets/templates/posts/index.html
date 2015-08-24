@@ -1,6 +1,9 @@
-<div class="container-fluid">
+<div class="container">
   <div class="row">
    <div ng-repeat="post in posts track by $index">
+
+      <img src="{{ post.image }}" width="500px" height="auto">
+
       <div class="page-header">
         {{ post.title }}
         {{ post.content }}
