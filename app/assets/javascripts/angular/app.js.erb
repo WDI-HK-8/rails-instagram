@@ -1,7 +1,7 @@
 'use strict'; // Make sure you don't have syntax errors
 
 // var app = angular.module('appName', ['oneDependency']);
-var app = angular.module('rails-instagram', ['ngRoute', 'ng-token-auth']);
+var app = angular.module('rails-instagram', ['ngRoute', 'ng-token-auth', 'ngFileUpload']);
 
 app.config(['$routeProvider', '$locationProvider', '$authProvider', function($routeProvider, $locationProvider, $authProvider) {
   // Configure Angular Routes
